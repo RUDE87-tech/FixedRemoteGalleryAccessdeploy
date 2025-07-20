@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fixedremotegalleryaccess
+    env: python
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    autoDeploy: true
